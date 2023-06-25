@@ -1,0 +1,38 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+/* getting by class name */
+.data{
+    margin-top: 40px;
+    display: grid;
+}
+
+.data h1{
+    color: red;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    stroke-width: 2px;
+
+}
+
+.fields input{
+    border: 1px solid whitesmoke;
+    border-radius: 10px 0px 10px 0px;
+    background-color: gainsboro;
+    height: 30px;
+}
+button{
+    color: red;
+    background-color: blueviolet;
+    width: 170px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px 0px 10px 0px;
+    height: 30px;
+}

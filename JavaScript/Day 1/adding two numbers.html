@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script basics</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .fields{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .fields input{
+            border-radius: 10px 10px 10px 10px;
+            border: 1px solid whitesmoke;
+            background-color: gainsboro;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="Data">
+        <div>Calculator which add two/2 Values</div>
+        <div class="fields">
+            <input id="number1" type="number"><br>
+            <input id="number2" type="number"><br>
+            <button onclick="addTwoNumbres()">Find Sum</button>
+        </div>
+        <div class="result">
+            <h1 id="resultFinal"></h1>
+        </div>
+
+    </div>
+    
+    <script>
+
+        function addTwoNumbres() {
+            let valueOne = document.getElementById("number1").value;
+            let valueTwo = document.getElementById("number2").value;
+            valueOne = parseInt(valueOne); // Use parseInt() instead of int()
+            valueTwo = parseInt(valueTwo); // Use parseInt() instead of int()
+            let sum = valueOne + valueTwo;
+            let resultFinal = document.getElementById("resultFinal");
+            resultFinal.innerHTML = `Result = ${sum}`;
+        }  
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form in HTML, CSS and JS</title>
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: antiquewhite;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    /* Getting by class name */
+    .mainData{
+        display: grid;
+        width: 400px;
+        height: 400px;
+        background-color: beige;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* getting by tag name */
+    input{
+        border: 2px solid white;
+        border-radius: 20px 10px 20px 10px;
+        height: 50px;
+        margin-bottom: 20px;
+        width: wrap;
+        background-color: aqua;
+        color: green;
+        padding: 5px;
+
+    }
+    button{
+        width: 100px;
+        text-align: center;
+        justify-content: center;
+        border: 1px solid whitesmoke;
+        background-color: aqua;
+        border-radius: 20px 10px 20px 10px;
+        height: 30px;
+        color: green;
+        font-weight: bolder;
+    }
+    button:hover{
+        background-color: white;
+        color: aqua;
+        transition: .2s ease-in-out;
+    }
+
+    .fields{
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+</style>
+<body>
+    <h1>Check your Name and Email</h1>
+    <div class="mainData">
+        <div class="fields">
+            <input type="text" name="firstName" id="firstName" placeholder="First Name">
+            <input type="text" name="latsName" id="lastName" placeholder="Last Name">
+            <input type="email" name="email" id="email" placeholder="Email Address">
+            <button type="submit" id="sends">Send</button>
+        </div>
+    </div>
+
+    <script>
+        let sendButton = document.getElementById("sends");
+        sendButton.addEventListener("click", function(){
+            let firstNameField = document.getElementById("firstName").value;
+            let lastNameField = document.getElementById("lastName").value;
+            let emailField = document.getElementById("email").value;
+            let data = document.getElementsByClassName("mainData");
+
+            let h1Element = document.createElement("h1");
+            h1Element.innerHTML = `${firstNameField} <br> ${lastNameField} <br> ${emailField}`;
+            document.body.appendChild(h1Element);
+        });
+    </script>
+</body>
+</html>

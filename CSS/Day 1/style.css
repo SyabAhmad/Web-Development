@@ -1,0 +1,38 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+/* getting by class name */
+.headers{
+    color: whitesmoke;
+    background-color: salmon;
+    text-align: center;
+
+}
+
+/* by tag name */
+p{
+    color: salmon;
+    text-align: center;
+    margin-top: 20px;
+    text-align: center justify;
+}
+
+/* getting by id */
+#pAndD{
+    color: violet;
+    padding: 10px;
+    text-align: justify;
+}
+
+/* getting by class name */
+.data{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: salmon;
+    width: 400px;
+}
