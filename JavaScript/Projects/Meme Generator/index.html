@@ -22,6 +22,11 @@
         .meme-generator{
             color: blue;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 600px;
+            height: 400px;
+            display: block;
+            text-align: center;
+            justify-content: center;
         }
         button{
             width: 150px;
@@ -51,17 +56,57 @@
            margin-top: 30px;
            margin-bottom: 10px;
         }
-        
+
+        img{
+            width: 30vh;
+        }
+
+
 
     </style>
 </head>
 <body>
     <div class="meme-generator">
-        <button class="generate">Generate</button>
-        <h1 class="memeTitle">title</h1>
-        <img src="" alt="this is meme image">
-        <h2 class="memAuthor">pak do ye</h2>
+        <button id="generate">Generate</button>
+        <h1 class="memeTitle"></h1>
+        <img id="imgs" src="" alt="this is meme image">
+        <h2 id="memeAuthor"></h2>
+
 
     </div>
+
+
+    <script>
+
+
+
+        function assigningvalues(url, title, author){
+            const title1 = document.querySelector(".meme-generator h1");
+            const img = document.getElementById("imgs");
+            const author1 = document.querySelector(".meme-generator h2")
+
+            title1.innerHTML = `${title}`;
+            img.setAttribute("src", `${url}`);
+            author1.innerHTML = `Memed By: ${author}`;
+        }
+
+        const memeButton = document.getElementById("generate");
+        memeButton.addEventListener("click", () => {
+
+
+            fetch("https://meme-api.com/gimme/wholesomememes")
+            .then((Responce) => Responce.json())
+            .then((data) => {
+                assigningvalues(data.url, data.title, data.author);
+
+            })
+            .catch(error => console.error(error));
+
+        });
+
+
+    </script>
+
+
 </body>
 </html>
