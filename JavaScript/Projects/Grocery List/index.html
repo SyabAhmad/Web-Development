@@ -89,14 +89,13 @@
         #listPost{
             gap: 20px;
             display: grid;
-            grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fill,minmax(100px, 1fr));
         }
         #Post{
             background-color: #ffffff;
             width: auto;
             border: 1px solid #0000fa;
             gap: 20px;
-            display: grid;
             color: #0000fa;
         }
 
@@ -173,9 +172,7 @@
     <!-- this section contains the post or grocery list -->
 
     <section id="listPost">
-<div id="Post">asdasdsa</div>
-<div id="Post">asdasdsa</div>
-<div id="Post" >asdasdsa</div>
+
     </section>
 
     <!-- and finally the footer -->
@@ -223,7 +220,7 @@
 
         
 
-        const formToBeSubmited = document.getElementById("addGrocery");
+        const formToBeSubmited = document.getElementById("formToBeSubmited");
         formToBeSubmited.addEventListener("submit", (event) => {
             event.preventDefault();
 
@@ -238,6 +235,8 @@
 
             const list = new List(postValues.Name,postValues.Description, postValues.price);                
             displayValue(list);
+            addingToDOM(list);
+            formToBeSubmited.reset();
         });
 
         function displayValue(list1){
@@ -245,6 +244,31 @@
             console.log("Description: ", list1.description);
             console.log("Price: ", list1.price);
         }
+
+        function addingToDOM(list) {
+            const listPost = document.getElementById("listPost");
+            const postDiv = document.createElement("div");
+            postDiv.id = "Post";
+            
+            const titleHeading = document.createElement("h3");
+            titleHeading.textContent = "Name: " + list.title;
+
+            const descriptionParagraph = document.createElement("p");
+            descriptionParagraph.textContent = "Description: " + list.description;
+
+            const priceParagraph = document.createElement("p");
+            priceParagraph.textContent = "Price: " + list.price;
+
+            
+
+            postDiv.appendChild(titleHeading);
+            postDiv.appendChild(descriptionParagraph);
+            postDiv.appendChild(priceParagraph);
+
+            listPost.appendChild(postDiv);
+        }
+
+
 
 
     </script>
