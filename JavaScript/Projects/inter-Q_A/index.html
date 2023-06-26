@@ -50,6 +50,7 @@
 
         #top{
             display: grid;
+            width: wrap;
             justify-content: center;
             align-items: center;
             text-align: center;
@@ -67,11 +68,48 @@
         #top h2+p+p+p span{
             background-color: white;
             padding: 8px;
-            border: 2px solid whitesmoke;
+            border: 2px solid #f2f2fe;
             border-radius: 10px 10px 10px 10px;
+            box-shadow: 0px 0px 2px 2px #eceaf4;
+            color: #0fa487;
                 }
         
+                hr{
+                    border: 1px dashed #0fa487;
+                    width: wrap;
+                }
+
+        #postSection{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            text-align: justify;
+            margin-inline-start: 20px;
+            margin-right: 20px;
+            gap: 20px;
+        }
+        #post{
+            width: wrap;
+            background-color: white;
+            text-align: justify;
+            padding: 10px;
+            border: 1px solid #eceaf4;
+            border-radius: 10px 10px 10px 10px;
+            border-right: 5px solid #0fa487;
+            border-right-color: #0fa487;
+            
+        }
         
+        
+        #footerSection{
+            display: flex;
+            margin-top: 100px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            color: #0fa487;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
 
 
         /* media queries goes here */
@@ -112,6 +150,7 @@
 
 
 
+
         
     </style>
 
@@ -139,7 +178,7 @@
         <div class="logoAndText">
             <h2>Interview Question Answer</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                This Website contains all interview type Questions related to <br> Programming Languages
             </p>
 
             <p>Currently Supported Questions</p>
@@ -148,6 +187,78 @@
             <hr>
         </div>
     </section>
+
+    <!-- this section contains the post container -->
+    <section id="postSection">
+        <!-- <div id="post"><label">asdsd</label> <hr> asasddad sdasda sadasdasdasd asdas dasdas da</div> -->
+        <!-- <div id="post"><label">asdsd</label> <hr> asasddad sdasda sadasdasdasd asdas dasdas da</div>
+        <div id="post"><label">asdsd</label> <hr> asasddad sdasda sadasdasdasd asdas dasdas da</div>
+        <div id="post"><label">asdsd</label> <hr> asasddad sdasda sadasdasdasd asdas dasdas da</div>
+        <div id="post"><label">asdsd</label> <hr> asasddad sdasda sadasdasdasd asdas dasdas da</div>
+        <div id="post"><label">asdsd</label> <hr> asasddad sdasda sadasdasdasd asdas dasdas da</div>
+        <div id="post"><label">asdsd</label> <hr> asasddad sdasda sadasdasdasd asdas dasdas da</div>
+        <div id="post"><label">asdsd</lael> <hr> asasddad sdasda sadasdasdasd asdas dasdas da</div> -->
+
+    </section>
+
+    <!-- this section contains the footer of the website -->
+    <section id="footerSection">
+        <footer>
+            <hr>
+            <h2>Inter-QA</h2>
+            <p>This website is free to use</p>
+            <hr>
+        </footer>
+    </section>
+
+
+    <script>
+        const values = [
+        {
+            
+            title: "what is javascript?",
+            description: "Javscript is one of the papular Programming languages"
+        },
+        {
+            
+            title: "what is PHP?",
+            description: "PHP is one of the papular Programming languages"
+        },
+        {
+            
+            title: "what is Java?",
+            description: "Java is one of the papular Programming languages"
+        },
+        ]
+
+        const postsContainer = document.getElementById('postSection');
+
+        for(let i=0; i<=values.length-1;i++)
+        {
+            
+            let post = document.createElement("div");
+            post.id="post";
+
+
+            let title = document.createElement("h2");
+            title.textContent = values[i].title;
+            title.style.color ="#00006f"
+            let hr = document.createElement("hr");
+            hr.id = "hr";
+            title.appendChild(hr);
+            hr.style.marginTop = "10px";
+            hr.style.marginBottom = "10px";
+            post.appendChild(title);
+
+            let description = document.createElement("p");
+            description.textContent = values[i].description;
+            post.appendChild(description);
+
+            postsContainer.appendChild(post);
+        }
+
+    </script>
+
 
 </body>
 </html>
