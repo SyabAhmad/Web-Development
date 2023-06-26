@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching</title>
+</head>
+<body>
+        <section><h1>Searching</h1></section>
+
+        <section><input type="text" id="searchingItem" placeholder="Search here">
+        <button id="searchButton">Search</button></section>
+
+
+        <script>
+            const searchButton = document.getElementById("searchButton");
+
+            searchButton.addEventListener("click", () => {
+                    fetchingData();
+
+            });
+
+            function fetchingData(){
+                const query = document.getElementById("searchingItem").value;
+
+                fetch("https://raw.githubusercontent.com/SyabAhmad/dataForInterviewQA/main/data.json")
+                    .then((Response) => Response.json())
+                    .then((Data) => {
+                        
+                        searchingData(Data, query);
+
+                    });
+            }
+
+            const searchingData = (Data, query) =>{
+                const result = Data.filter(data => data.title === query);
+                
+                const div = document.createElement("div");
+                const text = document.createElement("p");
+                const text1 = JSON.stringify(result);
+                text.textContent = JSON.stringify(result);
+                div.appendChild(text);
+                document.body.appendChild(div);
+            }
+
+            
+
+            
+        </script>
+</body>
+</html>
