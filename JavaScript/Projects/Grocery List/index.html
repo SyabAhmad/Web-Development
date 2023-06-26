@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List</title>
+
+    <style>
+
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #f2f2fe;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        header{
+            background-color: #0000fa;
+            color: white;
+            display: flex;
+            padding:20px;
+            justify-content: space-between;
+            width: wrap;
+        }
+        header ol{
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        header ol li a{
+                    color: #ffffff;
+                    text-decoration: none;
+                    border: none;
+                }
+        header ol li:Hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        header h2{
+            display: inline-block;
+            background-image: linear-gradient(to right, currentColor 55%, transparent 55%);
+            background-position: bottom;
+            background-size: 100% 4px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        #addSections form{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        #addSections{
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        #addSections h2{
+            margin-top: 50px;
+        }
+
+        input{
+            border: 1px solid #0000fa;
+            border-radius: 5px 10px 10px 5px;
+            height: 30px;
+        }
+        form Button{
+            height: 30px;
+            border: 1px solid #0000fa;
+            background-color: #0000fa;
+            color: white;
+            font-weight: 1000;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-top: 30px;
+        }
+
+        #footerSection{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 340px;
+        }
+
+        #listPost{
+            gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+        }
+        #Post{
+            background-color: #ffffff;
+            width: auto;
+            border: 1px solid #0000fa;
+            gap: 20px;
+            display: grid;
+            color: #0000fa;
+        }
+
+
+
+        /* media queries goes here */
+
+
+        @media (max-width: 425px) {
+          /* Styles for screens up to 425px width */
+          header ol{
+                display: grid;
+
+            }
+            
+        }
+
+        @media (max-width: 375px) {
+          /* Styles for screens up to 375px width */
+          header ol{
+                display: grid;
+
+            }
+        }
+
+        @media (max-width: 320px) {
+          /* Styles for screens up to 320px width */
+          header ol{
+                display: grid;
+
+            }   
+        header{
+                background-color: #0000fa;
+                color: white;
+                display: grid;
+                padding:20px;
+                justify-content: space-between;
+                width: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- this section contains header and all that -->
+    <section id="header">
+        <header>
+            <h2>Grocery</h2>
+            <ol>
+                <li><a href="www.github.com/SyabAhmad">Github</a></li>
+                <li><a href="www.linkedin.com/in/SyedSyab">LinkedIn</a></li>
+                <li><a href="https://instagram.com/syed_syab_ahmad?igshid=MzNlNGNkZWQ4Mg==">Instagram</a></li>
+                <li><a href="https://codepen.io/SyabAhmad">CodePen</a></li>
+            </ol>
+        </header>
+    </section>
+
+    <!-- this section contains the add button and things like that -->
+
+    <section id="addSections">
+        <h2>Grocery List</h2>
+        <p>Add your Grocery List here ( <i>one by one</i> )</p>
+        <form id="formToBeSubmited">
+            <label for="Title">Title</label>
+            <input type="text" id="Title">
+            <label for="description">Description</label>
+            <input type="text" id="description">
+            <label for="Price">Price</label>
+            <input type="text" id="Price">
+            <Button id="addGrocery">Submit</Button>
+        </form>
+    </section>
+
+    <hr style="border: 1px dashed #0000fa">
+    <!-- this section contains the post or grocery list -->
+
+    <section id="listPost">
+<div id="Post">asdasdsa</div>
+<div id="Post">asdasdsa</div>
+<div id="Post" >asdasdsa</div>
+    </section>
+
+    <!-- and finally the footer -->
+    <section id="footerSection">
+        <hr style="border: 1px dashed #0000fa">
+        <h2>Grocery List</h2>
+        <p>Free to use: Created with HTML CSS and JavaScript</p>
+        <hr style="border: 1px dashed #0000fa">
+    </section>
+
+
+    <script>
+
+        class List {
+          constructor(title, description, price) {
+            this._title = title;
+            this._description = description;
+            this._price = price;
+          }
+      
+          get title() {
+            return this._title;
+          }
+      
+          set title(newTitle) {
+            this._title = newTitle;
+          }
+      
+          get description() {
+            return this._description;
+          }
+      
+          set description(newDescription) {
+            this._description = newDescription;
+          }
+      
+          get price() {
+            return this._price;
+          }
+      
+          set price(newPrice) {
+            this._price = newPrice;
+          }
+        }
+
+        
+
+        const formToBeSubmited = document.getElementById("addGrocery");
+        formToBeSubmited.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const title = document.getElementById("Title").value;
+            const description = document.getElementById("description").value;
+            const price = document.getElementById("Price").value;
+            const postValues = {
+                        "Name":title,
+                        "Description":description,
+                        "Price":price
+                        };
+
+            const list = new List(postValues.Name,postValues.Description, postValues.price);                
+            displayValue(list);
+        });
+
+        function displayValue(list1){
+            console.log("Title: ", list1.title);
+            console.log("Description: ", list1.description);
+            console.log("Price: ", list1.price);
+        }
+
+
+    </script>
+
+
+</body>
+</html>
