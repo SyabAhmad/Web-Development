@@ -1,0 +1,15 @@
+<script>
+    fetch("http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=1648853")
+.then((Response) => {
+    if(Response.ok)
+    {
+        console.log("Success");
+    } else{
+        console.error("Could'nt connect");
+    }
+    Response.json()})
+.then((Data) => {
+    console.log("Success");
+}).catch((Error) => console.error(Error));
+</script>
+ 
