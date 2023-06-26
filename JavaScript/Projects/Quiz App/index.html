@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz app</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: aquamarine;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 40px;
+        }
+
+        #panel{
+            display: grid;
+            margin-top: 50px;
+            gap: 30px;
+        }
+        #panel input{
+            border: 1px solid white;
+            border-radius: 20px 20px 20px 0px;
+            padding: 10px;
+        }
+        #panel button{
+            border: 1px solid white;
+            border-radius:20px 20px 0px 20px;
+            padding: 10px;
+        }
+
+        #question{
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+            <h2>quiz app</h2>
+        </header>
+    </section>
+
+    <section id="panel">
+        <div id="question">
+            
+        </div>
+
+        <input type="text" id="answer" placeholder="Answer here">
+        <button id="nutton">Check Answer</button>
+    </section>
+
+
+    <script>
+        const list = [
+            {
+                Question: 'Pi Value',
+                Answer: 3.14,
+            },
+            {
+                Question: 'A Value',
+                Answer: 'A',
+            },
+            {
+                Question: 'b Value',
+                Answer: 'B',
+            },
+            {
+                Question: 'c Value',
+                Answer: 'C',
+            },
+            {
+                Question: 'd Value',
+                Answer: 12,
+            },
+        ];
+
+        const view = document.getElementById("question");
+        const viewContainer = document.getElementById("panel");
+        const button = document.getElementById("nutton");
+        let value = 0;
+
+        button.addEventListener("click", () => {
+            const answer = document.getElementById("answer").value;
+            console.log(answer);
+            displayQuestion();
+
+            if (answer === list[value].Answer) {
+                value += 1;
+            }
+        });
+
+        function displayQuestion() {
+            view.innerText = list[value].Question;
+        }
+
+        displayQuestion();
+        
+    </script>
+
+
+
+</body>
+</html>
