@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Question Answer</title>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #f2f2fe;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        header{
+            background-color: #0fa487;
+            color: white;
+            display: flex;
+            padding:20px;
+            justify-content: space-between;
+            width: wrap;
+        }
+        header ol{
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        header ol li a{
+                    color: #ffffff;
+                    text-decoration: none;
+                    border: none;
+                }
+        header ol li:Hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        header h2{
+            display: inline-block;
+            background-image: linear-gradient(to right, currentColor 55%, transparent 55%);
+            background-position: bottom;
+            background-size: 100% 4px;
+            background-repeat: no-repeat;
+        }
+
+
+
+        #top{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            color: #00006f;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+        }
+
+        #top h2, h2+p, h2+p+p, h2+p+p+p{
+            margin-bottom: 20px;
+        }
+
+        #top h2+p+p+p span{
+            background-color: white;
+            padding: 8px;
+            border: 2px solid whitesmoke;
+            border-radius: 10px 10px 10px 10px;
+                }
+        
+        
+
+
+        /* media queries goes here */
+
+
+        @media (max-width: 425px) {
+          /* Styles for screens up to 425px width */
+          header ol{
+                display: grid;
+
+            }
+            
+        }
+
+        @media (max-width: 375px) {
+          /* Styles for screens up to 375px width */
+          header ol{
+                display: grid;
+
+            }
+        }
+
+        @media (max-width: 320px) {
+          /* Styles for screens up to 320px width */
+          header ol{
+                display: grid;
+
+            }   
+        header{
+                background-color: #0fa487;
+                color: white;
+                display: grid;
+                padding:20px;
+                justify-content: space-between;
+                width: wrap;
+            }
+        }
+
+
+
+        
+    </style>
+
+</head>
+<body>
+
+    <!-- this section contains header -->
+
+    <section id="header">
+        <header>
+            <h2>Inter-QA</h2>
+            <ol>
+                <li><a href="#">Github</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">CodePen</a></li>
+            </ol>
+        </header>
+    </section>
+
+
+    <!-- this section contains logo, text, and tags with engind line -->
+
+    <section id="top">
+        <div class="logoAndText">
+            <h2>Interview Question Answer</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+
+            <p>Currently Supported Questions</p>
+            <p><span>JavaScript</span></p>
+
+            <hr>
+        </div>
+    </section>
+
+</body>
+</html>
