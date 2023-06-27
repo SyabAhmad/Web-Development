@@ -1,4 +1,4 @@
-<script>
+
 const a = [1,2,3,4,5,6,7,8,9,10];
 const evenNumber = a.filter((a) => {
     return a%2 ==0;
@@ -8,5 +8,3 @@ const evenNumber = a.filter((a) => {
 console.log(a);
 console.log(evenNumber);
 console.log(a);
-
-</script>
