@@ -11,9 +11,12 @@
             box-sizing: border-box;
         }
         body{
-            background-color: aquamarine;
+            background-color: #00b8d4;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             margin: 40px;
+        }
+        header{
+            color: white;
         }
 
         #panel{
@@ -31,16 +34,27 @@
             border-radius:20px 20px 0px 20px;
             padding: 10px;
         }
+        label{
+            color: green;
+        }
 
         #question{
-            border: 1px solid green;
+            
+            font-size: 20px;
+            background-color:#4dd0e1;
+            padding: 10px;
+            text-align: center;
+            padding-top: 20px;
+            border-radius: 40px 40px 0px 0px;
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         }
     </style>
 </head>
 <body>
     <section>
         <header>
-            <h2>quiz app</h2>
+            <h2>Quiz App</h2>
         </header>
     </section>
 
@@ -50,76 +64,67 @@
         </div>
 
         <input type="text" id="answer" placeholder="Answer here">
+        <label id="totalScore"></label>
+        <label id="questionNumber"></label>
         <button id="nutton">Check Answer</button>
     </section>
 
 
     <script>
-        const list = [
-            {
-                Question: 'Pi Value',
-                Answer: 3.14,
-            },
-            {
-                Question: 'A Value',
-                Answer: 'A',
-            },
-            {
-                Question: 'b Value',
-                Answer: 'B',
-            },
-            {
-                Question: 'c Value',
-                Answer: 'C',
-            },
-            {
-                Question: 'd Value',
-                Answer: 12,
-            },
-            {
-                Question: 'd Value',
-                Answer: 12,
-            },
-            {
-                Question: 'd Value',
-                Answer: 12,
-            },
-            {
-                Question: 'd Value',
-                Answer: 12,
-            },
-            {
-                Question: 'd Value',
-                Answer: 12,
-            },
-            {
-                Question: 'd Value',
-                Answer: 12,
-            },
-        ];
+
 
         const view = document.getElementById("question");
         const viewContainer = document.getElementById("panel");
         const button = document.getElementById("nutton");
+        const totalScore = document.getElementById("totalScore");
+        const questionNumber = document.getElementById("questionNumber");
         let value = 0;
         let score = 0;
-        view.innerHTML = list[value].Question;
+        let answer = "";
+
+        let fetching = async () => {
+          try {
+            const response = await fetch("https://raw.githubusercontent.com/SyabAhmad/Web-Development/master/JavaScript/Projects/Quiz%20App/data.json");
+            const data = await response.json();
+            return data;
+          } catch (error) {
+            console.log(error);
+          }
+        };
+
+        fetching().then(data => {
+          view.innerHTML = data[value].Question;
+          answer = data[value].Answer;
+        });
+
 
         button.addEventListener("click", () => {
-            const answer = document.getElementById("answer").value;
+            const answer1 = document.getElementById("answer").value;
+
             console.log(answer);
-            if (answer == list[value].Answer) {
+            if (answer1 == answer) {
                 value +=1;
                 displayQuestion();
                 score +=1;
+                totalScore.innerHTML = `Total Score is: ${score}`;
             }else{
                 alert("Try Again");
+                value +=1;
+                answer1.innerHTML=""
                 displayQuestion();
             }
         });
         function displayQuestion(){
-            view.innerHTML = list[value].Question;
+            fetching().then(data => {
+            view.innerHTML = data[value].Question;
+            answer = data[value].Answer;
+        });
         }
+
+        
+
+
+
         
     </script>
 
