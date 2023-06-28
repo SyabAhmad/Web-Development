@@ -1,7 +1,7 @@
 [
   {
     "Question": "What is the output of the following code? console.log(2 + 2);",
-    "Answer": 4
+    "Answer": "4"
   },
   {
     "Question": "What keyword is used to declare a variable in JavaScript?",
@@ -25,7 +25,7 @@
   },
   {
     "Question": "What is the result of the expression true && false?",
-    "Answer": false
+    "Answer": "false"
   },
   {
     "Question": "Which method is used to remove the last element from an array?",
