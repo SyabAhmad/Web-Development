@@ -1,0 +1,82 @@
+[
+  {
+    "Question": "What is the output of the following code? console.log(2 + 2);",
+    "Answer": "4"
+  },
+  {
+    "Question": "What keyword is used to declare a variable in JavaScript?",
+    "Answer": "var"
+  },
+  {
+    "Question": "What is the result of the expression \"5\" + 2?",
+    "Answer": "52"
+  },
+  {
+    "Question": "How can you convert a string to an integer in JavaScript?",
+    "Answer": "parseInt()"
+  },
+  {
+    "Question": "What is the correct syntax to add an event listener in JavaScript?",
+    "Answer": "element.addEventListener(event, function)"
+  },
+  {
+    "Question": "What is the purpose of the \"this\" keyword in JavaScript?",
+    "Answer": "context"
+  },
+  {
+    "Question": "What is the result of the expression true && false?",
+    "Answer": "false"
+  },
+  {
+    "Question": "Which method is used to remove the last element from an array?",
+    "Answer": "pop()"
+  },
+  {
+    "Question": "What is the value of NaN in JavaScript?",
+    "Answer": "not a number"
+  },
+  {
+    "Question": "How can you check the type of a variable in JavaScript?",
+    "Answer": "typeof operator"
+  }
+  {
+    "Question": "What is the capital of France?",
+    "Answer": "paris"
+  },
+  {
+    "Question": "Which planet is known as the \"Red Planet\"?",
+    "Answer": "mars"
+  },
+  {
+    "Question": "What is the currency of Japan?",
+    "Answer": "yen"
+  },
+  {
+    "Question": "Which animal is known as \"The King of the Jungle\"?",
+    "Answer": "lion"
+  },
+  {
+    "Question": "What is the chemical symbol for hydrogen?",
+    "Answer": "h"
+  },
+  {
+    "Question": "What is the tallest mammal on Earth?",
+    "Answer": "giraffe"
+  },
+  {
+    "Question": "Which country is home to the Taj Mahal?",
+    "Answer": "india"
+  },
+  {
+    "Question": "What is the largest ocean on Earth?",
+    "Answer": "pacific"
+  },
+  {
+    "Question": "Which instrument has black and white keys?",
+    "Answer": "piano"
+  },
+  {
+    "Question": "What is the primary language spoken in Brazil?",
+    "Answer": "portuguese"
+  }
+]
