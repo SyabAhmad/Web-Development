@@ -1,0 +1,25 @@
+body{
+    background-color: whitesmoke;
+  }
+  input{
+    border: 2px solid black;
+    border-radius: 20px 20px 20px 20px;
+    padding: 5px;
+    margin:10px
+  }
+
+#button{
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 20px 20px 20px 20px;
+    font-size: 20px;
+    margin: 10px;
+}
+#button1{
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 20px 20px 20px 20px;
+    font-size: 16px;
+    margin: 10px;
+}
+  
