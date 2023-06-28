@@ -76,28 +76,50 @@
                 Question: 'd Value',
                 Answer: 12,
             },
+            {
+                Question: 'd Value',
+                Answer: 12,
+            },
+            {
+                Question: 'd Value',
+                Answer: 12,
+            },
+            {
+                Question: 'd Value',
+                Answer: 12,
+            },
+            {
+                Question: 'd Value',
+                Answer: 12,
+            },
+            {
+                Question: 'd Value',
+                Answer: 12,
+            },
         ];
 
         const view = document.getElementById("question");
         const viewContainer = document.getElementById("panel");
         const button = document.getElementById("nutton");
         let value = 0;
+        let score = 0;
+        view.innerHTML = list[value].Question;
 
         button.addEventListener("click", () => {
             const answer = document.getElementById("answer").value;
             console.log(answer);
-            displayQuestion();
-
-            if (answer === list[value].Answer) {
-                value += 1;
+            if (answer == list[value].Answer) {
+                value +=1;
+                displayQuestion();
+                score +=1;
+            }else{
+                alert("Try Again");
+                displayQuestion();
             }
         });
-
-        function displayQuestion() {
-            view.innerText = list[value].Question;
+        function displayQuestion(){
+            view.innerHTML = list[value].Question;
         }
-
-        displayQuestion();
         
     </script>
 
