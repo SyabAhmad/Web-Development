@@ -21,7 +21,7 @@
   },
   {
     "Question": "What is the purpose of the \"this\" keyword in JavaScript?",
-    "Answer": "It refers to the current object or context"
+    "Answer": "context"
   },
   {
     "Question": "What is the result of the expression true && false?",
@@ -33,10 +33,50 @@
   },
   {
     "Question": "What is the value of NaN in JavaScript?",
-    "Answer": "Not a Number"
+    "Answer": "not a number"
   },
   {
     "Question": "How can you check the type of a variable in JavaScript?",
     "Answer": "typeof operator"
+  }
+  {
+    "Question": "What is the capital of France?",
+    "Answer": "paris"
+  },
+  {
+    "Question": "Which planet is known as the \"Red Planet\"?",
+    "Answer": "mars"
+  },
+  {
+    "Question": "What is the currency of Japan?",
+    "Answer": "yen"
+  },
+  {
+    "Question": "Which animal is known as \"The King of the Jungle\"?",
+    "Answer": "lion"
+  },
+  {
+    "Question": "What is the chemical symbol for hydrogen?",
+    "Answer": "h"
+  },
+  {
+    "Question": "What is the tallest mammal on Earth?",
+    "Answer": "giraffe"
+  },
+  {
+    "Question": "Which country is home to the Taj Mahal?",
+    "Answer": "india"
+  },
+  {
+    "Question": "What is the largest ocean on Earth?",
+    "Answer": "pacific"
+  },
+  {
+    "Question": "Which instrument has black and white keys?",
+    "Answer": "piano"
+  },
+  {
+    "Question": "What is the primary language spoken in Brazil?",
+    "Answer": "portuguese"
   }
 ]
