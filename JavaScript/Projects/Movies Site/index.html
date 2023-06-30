@@ -5,125 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies Website</title>
     <style>
-        *{
+        * {
             padding: 0px;
             margin: 0px;
             box-sizing: border-box;
         }
-        body{
+        body {
             background-color: #2f3e46;
             color: white;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
-        header{
+        header {
             margin: 20px;
             display: flex;
             justify-content: space-between;
         }
-        header h2{
+        header h2 {
             cursor: pointer;
         }
-        header ul{
+        header ul {
             list-style: none;
             display: flex;
             gap: 20px;
         }
-        header ul li{
+        header ul li {
             transition: .8s ease;
             font-size: 16px;
         }
-        header ul li:Hover{
+        header ul li:hover {
             font-size: 17px;
         }
-        main{
+        main {
             text-align: center;
             margin-top: 40px;
             color: white;
         }
-        p{
+        p {
             margin-top: 20px;
             text-align: justify center;
             margin-bottom: 20px;
         }
-        main input{
+        main input {
             border: 1px solid green;
             border-radius: 20px 20px 20px 20px;
             padding: 10px;
         }
 
-        .moveisList{
+        .moveisList {
             display: grid;
             font-size: 12px;
-            gap: 20px;
+            gap: 10px;
             margin: 20px;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         }
-        .box{
+        .box {
             overflow: hidden;
-            width: 250px;
-            height: wrap;
+            width: 150px;
+            height: auto;
+
         }
-        .movieInformations{
+        .box:Hover .movieInformations {
             background-color: white;
             color: white;
             opacity: 1;
             padding: 2px;
             background: transparent;
         }
-        .cardHeader h2,span{
+        .cardHeader h2, .cardHeader span {
             color: wheat;
             padding-top: 5px;
             padding-bottom: 10px;
         }
-        .cardHeader span{
-            float:right;
+        .cardHeader span {
+            float: right;
         }
-        .cardBody h3,p{
+        .cardBody h3, .cardBody p {
             color: azure;
         }
 
-
-
-
-        /* media Quires goes here */
-
         /* Media queries for screens up to 320px */
         @media (max-width: 320px) {
-          /* Styles for screens up to 320px */
-            header ul{
+            /* Styles for screens up to 320px */
+            header ul {
                 display: grid;
             }
-            header ul{
-                display: grid;
+            header ul li {
+                font-size: 14px;
             }
         }
 
         /* Media queries for screens between 321px and 375px */
         @media (min-width: 321px) and (max-width: 375px) {
-          /* Styles for screens between 321px and 375px */
-          header ul{
+            /* Styles for screens between 321px and 375px */
+            header ul {
                 display: grid;
             }
-            header ul{
-                display: grid;
+            header ul li {
+                font-size: 15px;
             }
         }
 
         /* Media queries for screens between 376px and 425px */
         @media (min-width: 376px) and (max-width: 425px) {
-          /* Styles for screens between 376px and 425px */
-          header ul{
+            /* Styles for screens between 376px and 425px */
+            header ul {
                 display: grid;
             }
-            header ul{
-                display: grid;
+            header ul li {
+                font-size: 16px;
             }
         }
-
     </style>
 </head>
 <body>
-    <!-- this section copntains all about header thing -->
+    <!-- this section contains all about header thing -->
     <section>
         <header>
             <h2>Movies</h2>
@@ -140,9 +135,9 @@
     <section>
         <main>
             <h1>Moveis Search Engine</h1>
-            <p>This website is developed using the following techolgies <br> 1) HTML <br> 2) CSS <br> 3) JavaScript</p>
-            <label for="searchItem">Search Moveis</label>
-            <input type="text" id="searchItem">
+            <p>This website is developed using the following technologies:<br>1) HTML<br>2) CSS<br>3) JavaScript</p>
+            <label for="searchItem">Search Movies</label>
+            <input type="text" id="searchItem" placeholder="Search is not working yet">
         </main>
     </section>
     <br><br>
@@ -150,139 +145,40 @@
 
     <!-- this section contains all the movies  -->
     <h1>List of Movies</h1>
-    <section class="moveisList">
-        
-        <div class="box">
-            <img src="img/panda.jpg" alt="movie image">
-            <div class="movieInformations">
-                <div class="cardHeader">
-                    <h2>movieTitle</h2>
-                    <span>9.2</span>
-                </div><br><hr>
-                <div class="cardBody">
-                    <h3>Overview</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="box">
-            <img  src="img/panda.jpg" alt="movie image">
-            <div class="movieInformations">
-                <div class="cardHeader">
-                    <h2>movieTitle</h2>
-                    <span>9.2</span>
-                </div>
-                <div class="cardBody">
-                    <h3>Overview</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <img src="img/1.jpg" alt="movie image">
-            <div class="movieInformations">
-                <div class="cardHeader">
-                    <h2>movieTitle</h2>
-                    <span>9.2</span>
-                </div>
-                <div class="cardBody">
-                    <h3>Overview</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <img src="img/panda.jpg" alt="movie image">
-            <div class="movieInformations">
-                <div class="cardHeader">
-                    <h2>movieTitle</h2>
-                    <span>9.2</span>
-                </div>
-                <div class="cardBody">
-                    <h3>Overview</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <img src="img/1.jpg" alt="movie image">
-            <div class="movieInformations">
-                <div class="cardHeader">
-                    <h2>movieTitle</h2>
-                    <span>9.2</span>
-                </div>
-                <div class="cardBody">
-                    <h3>Overview</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <img src="img/panda.jpg" alt="movie image">
-            <div class="movieInformations">
-                <div class="cardHeader">
-                    <h2>movieTitle</h2>
-                    <span>9.2</span>
-                </div>
-                <div class="cardBody">
-                    <h3>Overview</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <img src="img/1.jpg" alt="movie image">
-            <div class="movieInformations">
-                <div class="cardHeader">
-                    <h2>movieTitle</h2>
-                    <span>9.2</span>
-                </div>
-                <div class="cardBody">
-                    <h3>Overview</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-                </div>
-            </div>
-        </div>
-        <div class="box">
-            <img src="img/panda.jpg" alt="movie image">
-            <div class="movieInformations">
-                <div class="cardHeader">
-                    <h2>movieTitle</h2>
-                    <span>9.2</span>
-                </div>
-                <div class="cardBody">
-                    <h3>Overview</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-                </div>
-            </div>
-        </div> -->
-    </section>
+    <section class="moveisList"></section>
 
     <script>
-        const api ="";
-        const moviesData = async(api) =>{
-            const response = await(response.json());
-            const data = await(response);
-            console.log(data);
+        const api = "https://imdb-api.com/en/API/Top250Movies/k_sdz2i4v5";
+        const moviesData = async (api) => {
+            const movielist = document.querySelector(".moveisList");
+            const response = await fetch(api);
+            const data = await response.json();
+            console.log(data.items[0]);
+
+            for (let i = 0; i < data.items.length-100; i++) {
+                const box = document.createElement("div");
+                box.className = "box";
+                box.innerHTML = `
+                    <img width="150px" src="${data.items[i].image}" alt="movie image">
+                    <div class="movieInformations">
+                        <div class="cardHeader">
+                            <h2>${data.items[i].fullTitle}</h2>
+                            <span>${data.items[i].imDbRating}</span>
+                        </div><br><hr>
+                        <div class="cardBody">
+                            <h3>Overview</h3>
+                            <p>${data.items[i].crew}</p>
+                        </div>
+                    </div>
+                `;
+                movielist.appendChild(box);
+            }
         }
 
+        const search = document.getElementById("searchItem");
+
+
         moviesData(api);
-
-        const box = document.createElement("div");
-        box.innerHTML=`
-        <img src="img/panda.jpg" alt="movie image">
-            <div class="movieInformations">
-                <div class="cardHeader">
-                    <h2>movieTitle</h2>
-                    <span>9.2</span>
-                </div><br><hr>
-                <div class="cardBody">
-                    <h3>Overview</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-                </div>
-            </div>
-        `;
     </script>
-
 </body>
 </html>
