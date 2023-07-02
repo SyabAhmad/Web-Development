@@ -2,11 +2,184 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>1337x</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        header{
+            background-color: rgb(139, 41, 41);
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-inline-start: 20px;
+            padding-inline-end: 20px;
+            height: auto;
+            width: auto;
+        }
+        header ul{
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+            
+        }
+        header ul a{
+            color: white;
+            text-decoration: none;
+        }
+        header ul a:Hover{
+            color: wheat;
+            text-decoration: underline;
+            transition: .2s ease-in-out;
+        }
+
+        #top, #searchEngine{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            text-align: center;
+        }
+        #searchQuery{
+            padding: 10px;
+            width: 300px;
+            border-radius: 20px 20px 20px 20px;
+            color: rgb(139, 41, 41);
+            outline-color: rgb(139, 41, 41);
+            border: 2px solid rgb(139, 41, 41);
+        }
+        Button{
+            padding: 10px;
+            width: auto;
+            border-radius: 20px 20px 20px 20px;
+            color: rgb(139, 41, 41);
+            outline-color: rgb(139, 41, 41);
+            border: 2px solid rgb(139, 41, 41);
+        }
+        #postSection{
+            display: grid;
+            margin: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        #container{
+            width: auto;
+            height: auto;
+            color: wheat;
+            font-size: 13px;
+            overflow-x: scroll;
+            overflow-wrap: normal;
+            text-align: justify;
+            background-color:  rgb(139, 41, 41);
+        }
+    </style>
+
+
 </head>
 <body>
+
+    <!-- header and all that things -->
     <section>
+        <!-- header -->
+        <header>
+            <h2>Torrents</h2>
+            <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Forked API</a></li>
+                <li><a href="#">Supported Website</a></li>
+            </ul>
+        </header>
+    </section>
+
+    <!-- contains header with search engine -->
+    <section >
+
+        <div id="top">
+            <h2>Torrent Search Engine</h2>
+            <h3>Keep your self safe and search here for anything you want</h3>
+            <h4>default search engine is set to 1337x.to, you can change it below to what evre you want.</h4>
+        </div>
+        <div id="searchEngine">
+            <label for="searchQuery"></label>
+            <input required type="text" id="searchQuery" placeholder="Search Torrent Here">
+            <br>
+            <button id="searchButton" type="button">Search Now</button>
+
+        </div>
+    </section>
+
+    <!-- section contains the post body -->
+    <section id="postSection">
 
     </section>
+
+
+
+
+    <!-- Javscript for fetching data -->
+
+    <script>
+        const url = "https://api.neplix.stream/api/1337x/avengers";
+        const button = document.getElementById("searchButton");
+        
+        const gettingMoviesData = async (url, searchQuery) => {
+  const response = await fetch(url);
+  const data = await response.json();
+  const filterData = data.filter(item => {
+    const itemName = item.Name.toLowerCase();
+    const query = searchQuery.toLowerCase();
+    return itemName.startsWith(query.substring(0, 2));
+  });
+
+  const postSection = document.getElementById("postSection");
+
+  filterData.forEach(item => {
+    const box = document.createElement("div");
+    box.innerHTML = `
+      <div id="container">
+        <h2>${item.Name}</h2>
+        <p>Downloads: ${item.Downloads}</p>
+        <p>Seeders: ${item.Seeders}</p>
+        <p>Leechers: ${item.Leechers}</p>
+        <p>Size: ${item.Size}</p>
+        <p><button onClick="gotoCopy('${item.Magnet}');">Magnet Link</button></p>
+      </div>    
+    `;
+    postSection.appendChild(box);
+  });
+}
+
+button.addEventListener("click", () => {
+  const searchQuery = document.getElementById("searchQuery").value;
+  gettingMoviesData(url, searchQuery);
+});
+
+function gotoCopy(magnetLink) {
+  const dummyElement = document.createElement('input');
+  dummyElement.value = magnetLink;
+  document.body.appendChild(dummyElement);
+  dummyElement.select();
+  document.execCommand('copy');
+  document.body.removeChild(dummyElement);
+
+  alert('Magnet link copied to clipboard!');
+}
+
+
+        // Avengers.Infinity.War.2018.1080p.WEB-DL.H264.AC3-EVO[EtHD]
+    </script>
 </body>
 </html>
