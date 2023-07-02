@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <section>
+      <header>
+        <label for="todoinput">Enter Todo here</label>
+        <input type="text" id="todoinput" />
+        <button id="add">Add</button>
+      </header>
+    </section>
+
+    <div id="box"></div>
+
+    <script>
+      const button = document.getElementById("add");
+      const listOfTodo = [];
+      button.addEventListener("click", () => {
+        const todo = document.getElementById("todoinput").value;
+        const box = document.getElementById("box");
+        const list = document.createElement("ul");
+        list.innerHTML = `
+            <li>${todo}</li>
+            <button onClick="remove(this);">X</Button>
+        `;
+        listOfTodo.push(list);
+        box.appendChild(list);
+        document.getElementById("todoinput").value = ""; // Clear the input field
+      });
+      function remove(button) {
+        const list = button.parentElement;
+        list.remove(); // Remove the parent element (list item) from the DOM
+      }
+
+      console.log(input);
+    </script>
+  </body>
+</html>
