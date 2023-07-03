@@ -1,0 +1,14 @@
+.navBar {
+  color: white;
+  display: flex;
+  margin: 10px;
+  align-items: center;
+}
+
+.list ul {
+  display: flex;
+  gap: 20px;
+}
+.list ul li {
+  list-style: none;
+}

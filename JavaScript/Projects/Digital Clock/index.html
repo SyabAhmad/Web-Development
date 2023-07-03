@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        color: wheat;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+      }
+      .clock {
+        display: flex;
+        margin-top: 200px;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="area">
+      <!-- <div class="clock">
+        <h2>23</h2>
+        <h2>45</h2>
+        <h2>12</h2>
+      </div> -->
+    </section>
+    <script>
+      const dateFunction = () => {
+        const date = new Date();
+        const hour = date.getHours();
+        const minuts = date.getMinutes();
+        const seconds = date.getSeconds();
+        const area = document.getElementById("area");
+        area.innerHTML = `
+          <div class="clock">
+          <h2>${hour}</h2>
+          <h2> : ${minuts} :</h2>
+          <h2>${seconds}</h2>
+        </div>
+        `;
+      };
+
+      setInterval(() => {
+        dateFunction();
+      }, 1000);
+    </script>
+  </body>
+</html>
