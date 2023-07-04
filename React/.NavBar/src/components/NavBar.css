@@ -3,38 +3,41 @@
   padding: 0px;
   box-sizing: border-box;
 }
+/* .headerSection {
+  align-items: center;
+} */
+
 header {
-  background-color: #0fa487;
-  color: white;
   display: flex;
-  padding: 20px;
   justify-content: space-between;
-  width: wrap;
+  padding: 10px;
+  margin: 10px;
 }
-header ol {
+ul {
   display: flex;
-  gap: 30px;
   list-style: none;
+  gap: 20px;
+  justify-content: space-between;
 }
-header ol li a {
-  color: #ffffff;
+ul a {
+  color: white;
   text-decoration: none;
-  border: none;
+  font-size: 15px;
 }
-header ol li:hover {
+a:hover {
+  color: white;
+  text-decoration: none;
   text-decoration: underline;
-  cursor: pointer;
+  text-decoration-color: wheat;
 }
 
-header h2 {
-  display: inline-block;
-  background-image: linear-gradient(
-    to right,
-    currentColor 55%,
-    transparent 55%
-  );
-  background-position: bottom;
-  background-size: 100% 4px;
-  background-repeat: no-repeat;
-  cursor: pointer;
+/* media Queries goes here */
+@media (max-width: 425px) {
+  header {
+    display: grid;
+    gap: 10px;
+  }
+  header ul {
+    display: grid;
+  }
 }
