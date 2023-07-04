@@ -1,21 +1,18 @@
 import React from "react";
-import "./NavBar.css";
+
 const NavBar = () => {
   return (
     <>
-      <div className="navBar">
-        <div className="Logo">
-          <h2>NavBar</h2>
-        </div>
-        <div className="list">
+      <section className="headerSection">
+        <header>
+          <h1>logo</h1>
           <ul>
             <li>Home</li>
-            <li>About us</li>
-            <li>Contact Us</li>
-            <li>Media</li>
+            <li>About</li>
+            <li>Contact</li>
           </ul>
-        </div>
-      </div>
+        </header>
+      </section>
     </>
   );
 };

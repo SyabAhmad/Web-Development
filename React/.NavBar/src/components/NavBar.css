@@ -1,14 +1,40 @@
-.navBar {
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+header {
+  background-color: #0fa487;
   color: white;
   display: flex;
-  margin: 10px;
-  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+  width: wrap;
+}
+header ol {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+header ol li a {
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+}
+header ol li:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.list ul {
-  display: flex;
-  gap: 20px;
-}
-.list ul li {
-  list-style: none;
+header h2 {
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    currentColor 55%,
+    transparent 55%
+  );
+  background-position: bottom;
+  background-size: 100% 4px;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
