@@ -4,18 +4,18 @@ const Footer = () => {
     <>
       <footer>
         <div className="logo">
-          <h2>Logo</h2>
+          <h2>Syed Syab</h2>
         </div>
         <div className="list">
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a href="https://linkedin.com/in/SyedSyab">LinedIn</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="https://github.com/SyabAhmad">Github</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="https://codepen.io/SyabAhmad">Codepen</a>
             </li>
           </ul>
         </div>

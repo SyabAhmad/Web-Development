@@ -35,6 +35,23 @@ const MainForHome = () => {
           <img src={profile} alt="Profile Image" />
         </div>
       </main>
+      <section className="ShowcasingCards">
+        <div className="card-1">
+          <img src={profile} alt="image" />
+          <h3>Web Development</h3>
+          <p>LorLorem iLLLorem iorem iorem iLorLorem iem iem i</p>
+        </div>
+        <div className="card-2">
+          <img src={profile} alt="image" />
+          <h3>Web Development</h3>
+          <p>LorLorem iLLLorem iorem iorem iLorLorem iem iem i</p>
+        </div>
+        <div className="card-3">
+          <img src={profile} alt="image" />
+          <h3>Web Development</h3>
+          <p>LorLorem iLLLorem iorem iorem iLorLorem iem iem i</p>
+        </div>
+      </section>
     </>
   );
 };
