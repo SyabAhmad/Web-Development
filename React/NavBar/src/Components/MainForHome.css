@@ -1,0 +1,28 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 200px;
+}
+main .pic img {
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px white;
+  transition: 0.8s ease-in-out;
+}
+main .pic img:hover {
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px white;
+}
+
+main .information {
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px white;
+}
+span {
+  color: yellow;
+}
