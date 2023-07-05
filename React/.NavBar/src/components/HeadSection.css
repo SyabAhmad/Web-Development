@@ -1,0 +1,103 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.mainImage {
+  width: 200px;
+  height: 400px;
+  display: flex;
+}
+.frontImage {
+  width: 400px;
+  background-color: rgb(218, 214, 16);
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  display: flex;
+  margin-top: 50px;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+.frontImage img {
+  width: 200px;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+.cardsSection {
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+  padding: 100px;
+  background-color: rgb(218, 214, 16);
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  overflow: hidden;
+  gap: 20px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  font-size: 15px;
+  background-color: #1b1b03;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.card img {
+  width: 100px;
+}
+
+/* media queries goes here */
+@media (max-width: 425px) {
+  .images1 {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+
+  .cardsSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card {
+    width: 300px;
+    height: 150px;
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+  }
+  .card img {
+    width: 150px;
+    height: 150px;
+    gap: 20px;
+  }
+
+  .frontImage {
+    width: 200px;
+    background-color: rgb(218, 214, 16);
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    display: flex;
+    margin-top: 50px;
+    border-radius: 10px;
+    border: 2px solid white;
+  }
+  .frontImage img {
+    width: 100px;
+    border-radius: 10px;
+    border: 2px solid white;
+  }
+}
