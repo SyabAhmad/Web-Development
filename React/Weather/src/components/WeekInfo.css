@@ -1,0 +1,10 @@
+.cardaSection {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+.card {
+  background-color: aliceblue;
+  color: black;
+  padding: 10px;
+}
