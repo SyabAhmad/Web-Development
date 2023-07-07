@@ -2,9 +2,11 @@
   display: flex;
   gap: 20px;
   font-size: 14px;
+  margin-top: 50px;
+  justify-content: center;
 }
 .card {
   background-color: rgb(26, 141, 241);
-  color: black;
+  color: white;
   padding: 10px;
 }
