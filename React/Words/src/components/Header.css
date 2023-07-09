@@ -1,0 +1,41 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+nav {
+  background-color: green;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30px;
+}
+.links ul {
+  display: flex;
+  gap: 20px;
+}
+.links ul li {
+  list-style: none;
+}
+.links ul a {
+  text-decoration: none;
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+.links ul a:hover {
+  text-decoration: underline;
+  color: wheat;
+}
+
+@media (max-width: 425px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .links ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
