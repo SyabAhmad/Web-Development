@@ -1,0 +1,62 @@
+.panel {
+  background-color: rgb(54, 79, 190);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 320px;
+  align-self: center;
+}
+.usingSocialMedia {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: justify;
+}
+hr {
+  background-color: black;
+}
+.usingSocialMedia .justForBorder {
+  border: 1px solid black;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 200px;
+  align-self: center;
+  border-radius: 30px;
+}
+.costumAuth {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.costumAuth legend {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 200px;
+  align-self: center;
+}
+
+.costumAuth input {
+  border: 1px solid white;
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.costumAuth button {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+  justify-content: center;
+  align-self: center;
+  padding: 8px;
+  font-size: 20px;
+  transition: 0.2s ease;
+  border: 1px solid white;
+}
+.costumAuth button:hover {
+  box-shadow: 0px 0px 8px white;
+}
